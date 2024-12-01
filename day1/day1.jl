@@ -25,3 +25,11 @@ function day1a(f)
 	t2 = broadcast(p -> p[2], t)
 	sum(abs.(sort!(t1) .- sort!(t2)))
 end
+
+function main()
+	f = (length(ARGS) > 0) ? ARGS[1] : "day1/ex1.txt"
+	println("Day1a : ", day1a(f))
+	println("Day1b : ", day1b(f))
+end
+
+main()
