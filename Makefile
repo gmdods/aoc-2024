@@ -1,4 +1,4 @@
-all: day1 day2
+all: day1 day2 day3
 
 .PHONY: day1
 day1:
@@ -7,3 +7,8 @@ day1:
 .PHONY: day2
 day2:
 	julia day2/day2.jl day2/day2.txt
+
+.PHONY: day3
+day3:
+	julia day3/day3.jl day3/day3.txt
+
