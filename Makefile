@@ -1,4 +1,4 @@
-all: day1 day2 day3 day4 day5 day6
+all: day1 day2 day3 day4 day5 day6 day7
 
 .PHONY: day1
 day1:
@@ -23,4 +23,8 @@ day5:
 .PHONY: day6
 day6:
 	julia day6/day6.jl day6/day6.txt
+
+.PHONY: day7
+day7:
+	julia day7/day7.jl day7/day7.txt
 
