@@ -1,4 +1,4 @@
-function day8b(f)
+function day08b(f)
 	s = reduce(hcat, collect.(filter(!isempty, readlines(f))))
 	anti = falses(size(s))
 	for c = filter!(!=('.'), unique(s))
@@ -6,7 +6,7 @@ function day8b(f)
 		for i = 1:length(m)
 			for j = i+1:length(m)
 				d = m[i] - m[j]
-				# d = CartesianIndex(div.(d.I, gcd(d.I...))...)
+				# d = CartesianIndex0(div.(d.I, gcd(d.I...))...)
 				a = m[i]
 				while checkbounds(Bool, anti, a);
 					anti[a] = true
@@ -23,7 +23,7 @@ function day8b(f)
 	return sum(anti)
 end
 
-function day8a(f)
+function day08a(f)
 	s = reduce(hcat, collect.(filter(!isempty, readlines(f))))
 	anti = falses(size(s))
 	for c = filter!(!=('.'), unique(s))
@@ -46,9 +46,9 @@ function day8a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day8/ex8.txt"
-	println("Day8a : ", day8a(f))
-	println("Day8b : ", day8b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day08/ex08.txt"
+	println("Day08a : ", day08a(f))
+	println("Day08b : ", day08b(f))
 end
 
 main()

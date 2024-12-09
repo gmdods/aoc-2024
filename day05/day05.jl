@@ -1,4 +1,4 @@
-function day5b(f)
+function day05b(f)
 	s = readlines(f)
 	i = findfirst(isempty, s)
 	rule = broadcast(split.(s[1:i-1], '|')) do r
@@ -27,7 +27,7 @@ function day5b(f)
 	end)
 end
 
-function day5a(f)
+function day05a(f)
 	s = readlines(f)
 	i = findfirst(isempty, s)
 	rule = broadcast(split.(s[1:i-1], '|')) do r
@@ -49,9 +49,9 @@ function day5a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day5/ex5.txt"
-	println("Day5a : ", day5a(f))
-	println("Day5b : ", day5b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day05/ex05.txt"
+	println("Day05a : ", day05a(f))
+	println("Day05b : ", day05b(f))
 end
 
 main()

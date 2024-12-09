@@ -1,4 +1,4 @@
-function day9b(f)
+function day09b(f)
 	s = parse.(Int, collect(readlines(f)[1]))
 	w = s[1:2:end]
 	d = s[2:2:end]
@@ -27,7 +27,7 @@ function day9b(f)
 	return sum(g .* (0:length(g)-1))
 end
 
-function day9a(f)
+function day09a(f)
 	s = parse.(Int, collect(readlines(f)[1]))
 	a = accumulate(+, s)
 	w = s[1:2:end]
@@ -53,9 +53,9 @@ function day9a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day9/ex9.txt"
-	println("Day9a : ", day9a(f))
-	println("Day9b : ", day9b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day09/ex09.txt"
+	println("Day09a : ", day09a(f))
+	println("Day09b : ", day09b(f))
 end
 
 main()

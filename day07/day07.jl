@@ -1,4 +1,4 @@
-function day7b(f)
+function day07b(f)
 	function recur(r::Int, t::Vector{Int})
 		length(t) == 0 && return (r == 0)
 		length(t) == 1 && return (r == t[1])
@@ -32,7 +32,7 @@ function day7b(f)
 	end)
 end
 
-function day7a(f)
+function day07a(f)
 	function recur(r::Int, t::Vector{Int})
 		length(t) == 0 && return (r == 0)
 		length(t) == 1 && return (r == t[1])
@@ -61,9 +61,9 @@ function day7a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day7/ex7.txt"
-	println("Day7a : ", day7a(f))
-	println("Day7b : ", day7b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day07/ex07.txt"
+	println("Day07a : ", day07a(f))
+	println("Day07b : ", day07b(f))
 end
 
 main()

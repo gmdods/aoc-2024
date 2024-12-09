@@ -11,7 +11,7 @@ function mul(s, r)
 	(;lhs, rhs)
 end
 
-function day3b(f)
+function day03b(f)
 	s = read(f, String)
 	a = 0
 	does = findall("do()", s)
@@ -30,7 +30,7 @@ function day3b(f)
 	return a
 end
 
-function day3a(f)
+function day03a(f)
 	s = read(f, String)
 	a = 0
 	for r = findall("mul", s)
@@ -42,10 +42,10 @@ function day3a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day3/ex3a.txt"
-	println("Day3a : ", day3a(f))
-	f = (length(ARGS) > 0) ? ARGS[1] : "day3/ex3b.txt"
-	println("Day3b : ", day3b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day03/ex03a.txt"
+	println("Day03a : ", day03a(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day03/ex03b.txt"
+	println("Day03b : ", day03b(f))
 end
 
 main()

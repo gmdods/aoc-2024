@@ -1,4 +1,4 @@
-function day2b(f)
+function day02b(f)
 	function safe(di)
 		sg = sign.(di)
 		allequal(sg) && sg[1] != 0 && all(abs.(di) .<= 3)
@@ -31,7 +31,7 @@ function day2b(f)
 	end)
 end
 
-function day2a(f)
+function day02a(f)
 	sum(broadcast(readlines(f)) do s
 		t = parse.(Int, split(s))
 		di = diff(t)
@@ -41,9 +41,9 @@ function day2a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day2/ex2.txt"
-	println("Day2a : ", day2a(f))
-	println("Day2b : ", day2b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day02/ex02.txt"
+	println("Day02a : ", day02a(f))
+	println("Day02b : ", day02b(f))
 end
 
 main()

@@ -1,38 +1,38 @@
-all: day1 day2 day3 day4 day5 day6 day7 day8 day9
+all: day01 day02 day03 day04 day05 day06 day07 day08 day09
 
-.PHONY: day1
-day1:
-	julia day1/day1.jl day1/day1.txt
+.PHONY: day01
+day01:
+	julia day01/day01.jl day01/day01.txt
 
-.PHONY: day2
-day2:
-	julia day2/day2.jl day2/day2.txt
+.PHONY: day02
+day02:
+	julia day02/day02.jl day02/day02.txt
 
-.PHONY: day3
-day3:
-	julia day3/day3.jl day3/day3.txt
+.PHONY: day03
+day03:
+	julia day03/day03.jl day03/day03.txt
 
-.PHONY: day4
-day4:
-	julia day4/day4.jl day4/day4.txt
+.PHONY: day04
+day04:
+	julia day04/day04.jl day04/day04.txt
 
-.PHONY: day5
-day5:
-	julia day5/day5.jl day5/day5.txt
+.PHONY: day05
+day05:
+	julia day05/day05.jl day05/day05.txt
 
-.PHONY: day6
-day6:
-	julia day6/day6.jl day6/day6.txt
+.PHONY: day06
+day06:
+	julia day06/day06.jl day06/day06.txt
 
-.PHONY: day7
-day7:
-	julia day7/day7.jl day7/day7.txt
+.PHONY: day07
+day07:
+	julia day07/day07.jl day07/day07.txt
 
-.PHONY: day8
-day8:
-	julia day8/day8.jl day8/day8.txt
+.PHONY: day08
+day08:
+	julia day08/day08.jl day08/day08.txt
 
-.PHONY: day9
-day9:
-	julia day9/day9.jl day9/day9.txt
+.PHONY: day09
+day09:
+	julia day09/day09.jl day09/day09.txt
 

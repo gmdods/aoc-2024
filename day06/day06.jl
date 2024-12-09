@@ -35,7 +35,7 @@ function path(s)
 
 end
 
-function day6b(f)
+function day06b(f)
 	s = reduce(hcat, collect.(filter(!isempty, readlines(f))))
 
 	sum(broadcast(findall(s .== '.')) do u
@@ -46,15 +46,15 @@ function day6b(f)
 	end)
 end
 
-function day6a(f)
+function day06a(f)
 	s = reduce(hcat, collect.(filter(!isempty, readlines(f))))
 	return path(s)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day6/ex6.txt"
-	println("Day6a : ", day6a(f))
-	println("Day6b : ", day6b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day06/ex06.txt"
+	println("Day06a : ", day06a(f))
+	println("Day06b : ", day06b(f))
 end
 
 main()

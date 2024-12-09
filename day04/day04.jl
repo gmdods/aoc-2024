@@ -1,4 +1,4 @@
-function day4b(f)
+function day04b(f)
 	s = reduce(hcat, collect.(readlines(f)))
 	sum(broadcast(findall(s .== 'A')) do r
 		dirs = [
@@ -12,7 +12,7 @@ function day4b(f)
 	end)
 end
 
-function day4a(f)
+function day04a(f)
 	s = reduce(hcat, collect.(readlines(f)))
 	sum(broadcast(findall(s .== 'X')) do r
 		dirs = [
@@ -30,9 +30,9 @@ function day4a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day4/ex4.txt"
-	println("Day4a : ", day4a(f))
-	println("Day4b : ", day4b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day04/ex04.txt"
+	println("Day04a : ", day04a(f))
+	println("Day04b : ", day04b(f))
 end
 
 main()

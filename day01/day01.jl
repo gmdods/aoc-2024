@@ -5,7 +5,7 @@ function counter(a)
 	return d
 end
 
-function day1b(f)
+function day01b(f)
 	t = broadcast(readlines(f)) do s
 		s = split(s)
 		(parse(Int, s[1]), parse(Int, s[2]))
@@ -16,7 +16,7 @@ function day1b(f)
 	sum(t1 .* broadcast(n -> get(c, n, 0), t1))
 end
 
-function day1a(f)
+function day01a(f)
 	t = broadcast(readlines(f)) do s
 		s = split(s)
 		(parse(Int, s[1]), parse(Int, s[2]))
@@ -27,9 +27,9 @@ function day1a(f)
 end
 
 function main()
-	f = (length(ARGS) > 0) ? ARGS[1] : "day1/ex1.txt"
-	println("Day1a : ", day1a(f))
-	println("Day1b : ", day1b(f))
+	f = (length(ARGS) > 0) ? ARGS[1] : "day01/ex01.txt"
+	println("Day01a : ", day01a(f))
+	println("Day01b : ", day01b(f))
 end
 
 main()
