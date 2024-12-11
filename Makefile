@@ -1,4 +1,4 @@
-all: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10
+all: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10 day11
 
 .PHONY: day01
 day01:
@@ -39,4 +39,8 @@ day09:
 .PHONY: day10
 day10:
 	julia day10/day10.jl day10/day10.txt
+
+.PHONY: day11
+day11:
+	julia --threads 8 day11/day11.jl day11/day11.txt
 
