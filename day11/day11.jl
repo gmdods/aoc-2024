@@ -17,27 +17,35 @@ end
 
 function day11b(f)
 	s = parse.(Int, split(readlines(f)[1]))
-	K = 30
-	for i = 1:K
-		s = mapreduce(blink, vcat, s)
-	end
-	c = counter(s)
-	Threads.@threads for r = collect(keys(c))
-		a = r
-		for i = (K+1):2K
-			r = mapreduce(blink, vcat, r)
+	d = Dict{Int, Dict{Int, Int}}()
+	K = 15
+	function blink_chunk(r::Int)
+		v = get(d, r, nothing)
+		if !isnothing(v)
+			return v
 		end
-		d = counter(r)
-		for t = collect(keys(d))
-			b = t
-			for i = (2K+1):75
-				t = mapreduce(blink, vcat, t)
-			end
-			d[b] = d[b] * length(t)
+		t = [r]
+		for i = 1:K
+			t = mapreduce(blink, vcat, t)
 		end
-		c[a] = c[a] * sum(values(d))
+		c = counter(t)
+		d[r] = c
+		return c
 	end
-	return sum(values(c))
+	function recur(r::Int, N)
+		N <= 0 && return 1
+		c = blink_chunk(r)
+		n = 0
+		for (t, v) = pairs(c)
+			n += v * recur(t, N - K)
+		end
+		return n
+	end
+	a = Threads.Atomic{Int}(0)
+	Threads.@threads for r = s
+		Threads.atomic_add!(a, recur(r, 75))
+	end
+	return a[]
 end
 
 function day11a(f)
@@ -51,8 +59,8 @@ end
 function main()
 	f = (length(ARGS) > 0) ? ARGS[1] : "day11/ex11.txt"
 	println("Day11a : ", day11a(f))
-	println("Day11b : [slow: uncomment in file]")
-	# println("Day11b : ", day11b(f))
+	print("Day11b : [30s] ")
+	println(day11b(f))
 end
 
 main()
