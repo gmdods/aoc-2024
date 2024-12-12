@@ -44,3 +44,7 @@ day10:
 day11:
 	julia --threads 8 day11/day11.jl day11/day11.txt
 
+.PHONY: day12
+day12:
+	julia day12/day12.jl day12/day12.txt
+
