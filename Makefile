@@ -68,3 +68,7 @@ day16:
 day17:
 	julia day17/day17.jl day17/day17.txt
 
+.PHONY: day18
+day18:
+	julia day18/day18.jl day18/day18.txt
+
