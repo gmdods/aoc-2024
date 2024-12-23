@@ -1,6 +1,6 @@
 all: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10 \
 	day11 day12 day13 day14 day15 day16 day17 day18 day19 day20 \
-	day21
+	day21 day22 day23
 
 .PHONY: day01
 day01:
@@ -89,4 +89,8 @@ day21:
 .PHONY: day22
 day22:
 	julia day22/day22.jl day22/day22.txt
+
+.PHONY: day23
+day23:
+	julia day23/day23.jl day23/day23.txt
 
